@@ -1,0 +1,9 @@
+.mem1_pagenumber{
+    list-style: none;
+    display: flex;
+}
+.mem1_pagenumber li{
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}

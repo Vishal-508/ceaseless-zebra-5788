@@ -1,9 +1,3 @@
-import React from 'react'
-
-const actionTypes = () => {
-  return (
-    <div>actionTypes</div>
-  )
-}
-
-export default actionTypes
+export const GET_NEWSDATA_REQUEST="GET_NEWSDATA_REQUEST"
+export const GET_NEWSDATA_SUCCESS="GET_NEWSDATA_SUCCESS"
+export const GET_NEWSDATA_FAILURE="GET_NEWSDATA_FAILURE"
