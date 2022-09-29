@@ -1,9 +1,7 @@
-import React from 'react'
+// ********** THIS IS ACTION_TYPES FOR HOME_DATA ***********
 
-const actionTypes = () => {
-  return (
-    <div>actionTypes</div>
-  )
-}
+export const GET_HOMEDATA_REQUEST="GET_HOMEDATA_REQUEST";
+export const GET_HOMEDATA_SUCCESS="GET_HOMEDATA_SUCCESS";
+export const GET_HOMEDATA_FAILURE="GET_HOMEDATA_FAILURE";
 
-export default actionTypes
+// ********** THIS IS ACTION_TYPES FOR  ***********
