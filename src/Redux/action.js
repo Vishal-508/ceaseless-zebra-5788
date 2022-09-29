@@ -1,4 +1,4 @@
-import { GET_NEWSDATA_FAILURE, GET_NEWSDATA_REQUEST, GET_NEWSDATA_SUCCESS } from "./actionTypes"
+import { GET_NEWSDATA_FAILURE, GET_NEWSDATA_REQUEST, GET_NEWSDATA_SUCCESS, GET_SINGLENEWSDATA_FAILURE, GET_SINGLENEWSDATA_REQUEST, GET_SINGLENEWSDATA_SUCCESS } from "./actionTypes"
 import axios from "axios"
 const Getdata_func=(dispatch)=>{
   dispatch({type:GET_NEWSDATA_REQUEST})
@@ -7,8 +7,19 @@ const Getdata_func=(dispatch)=>{
     dispatch({type:GET_NEWSDATA_SUCCESS,payload:res.data})
   }).catch((err)=>{
     console.log(err)
-    dispatch({type:GET_NEWSDATA_FAILURE,payload:err.data})
+    dispatch({type:GET_NEWSDATA_FAILURE,payload:err})
 
   })
 }
-export {Getdata_func}
+const Getdata_func2=(dispatch,id)=>{
+  dispatch({type:GET_SINGLENEWSDATA_REQUEST})
+  return axios.get(`http://localhost:8080/stories/${id}`).then((res)=>{
+    console.log(res.data)
+   return  dispatch({type:GET_SINGLENEWSDATA_SUCCESS,payload:res.data})
+  }).catch((err)=>{
+    console.log(err)
+    dispatch({type:GET_SINGLENEWSDATA_FAILURE,payload:err})
+
+  })
+}
+export {Getdata_func,Getdata_func2}
