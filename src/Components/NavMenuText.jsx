@@ -4,42 +4,48 @@ import {
 	Menu,
 	MenuButton,
 	MenuList,
-	Button,
 	useColorModeValue,
+	Flex,
+	Box,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import React from "react";
 
-const NavMenuText = () => {
+const NavMenuText = ({ name, leftDropDown, rightDropDown }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
-		// <Button
-		// 	bg="none"
-		// 	py={7}
-		// 	px={3}
-		// 	colorScheme="blackAlpha"
-		// 	borderRadius="none"
-		// >
-		// 	Live Scores
-		// </Button>
 		<Menu isOpen={isOpen}>
 			<MenuButton
 				variant="ghost"
 				fontWeight="semibold"
-				py={[1, 2, 2]}
-				px={4}
+				fontSize="14px"
+				py={[4, 4, 4]}
+				px={3}
 				_hover={{ bg: useColorModeValue("#0294c9", "#0294c9") }}
 				borderRadius="none"
 				aria-label="Courses"
 				onMouseEnter={onOpen}
 				onMouseLeave={onClose}
 			>
-				Live Scores
+				{name}
 			</MenuButton>
-			<MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
-				<MenuItem>Menu Item 1</MenuItem>
-				<MenuItem>Menu Item 2</MenuItem>
-				<MenuItem>Menu Item 3</MenuItem>
+			<MenuList onMouseEnter={onOpen} onMouseLeave={onClose} color="black">
+				<Flex>
+					<Box px={2}>
+						{leftDropDown.map((item) => (
+							<MenuItem minW={200} _hover={{ bg: "#bfeaff" }}>
+								{item}
+							</MenuItem>
+						))}
+					</Box>
+
+					<Box px={2}>
+						{rightDropDown?.map((item) => (
+							<MenuItem minW={200} _hover={{ bg: "#bfeaff" }}>
+								{item}
+							</MenuItem>
+						))}
+					</Box>
+				</Flex>
 			</MenuList>
 		</Menu>
 	);
