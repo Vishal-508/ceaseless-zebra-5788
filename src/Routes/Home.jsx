@@ -1,5 +1,5 @@
 import { Box, Center } from '@chakra-ui/react';
-
+import "../Styles/Home.css";
 import HomeDataList from "../Components/HomeDataList"
 const Home = () => {
  
