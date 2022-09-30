@@ -1,9 +1,16 @@
-import React from 'react'
+import * as types from "./actionTypes";
 
-const reducer = () => {
-  return (
-    <div>reducer</div>
-  )
-}
+const initialState = [];
 
-export default reducer
+export const appReducer = (state=initialState,action) => {
+   switch(action.type){
+        case(types.GET_DATA):
+            return [...state,action.payload];
+
+        default:
+            return state
+   }
+     
+    
+  };
+  

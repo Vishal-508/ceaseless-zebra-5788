@@ -1,9 +1,19 @@
-import React from 'react'
+import axios from "axios";
 
-const action = () => {
-  return (
-    <div>action</div>
-  )
-}
+var config = {
+  method: 'get',
+  url: 'https://hs-consumer-api.espncricinfo.com/v1/edition/details',
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
+  },
 
-export default action
+};
+
+const GET_DATA = async () => {
+  const data = await axios(config)
+    .then((r) => r);
+  console.log(data);
+};
+
+export default GET_DATA;
