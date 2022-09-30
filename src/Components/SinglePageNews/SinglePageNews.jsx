@@ -20,7 +20,7 @@ export default function SinglePageNews() {
       })
     
     },[id])  
-  
+  console.log(data)
  console.log(data)
  if(data)
   return (
@@ -55,7 +55,7 @@ export default function SinglePageNews() {
     </div>
 
      <div className='mem1_news_single_pagenews_Parent_img1  mem1_news_single_pagenews_Parent_img11'>
-      {/* <img src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_50/lsci/${data.image.url}`} alt="" /> */}
+      <img src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_50/lsci/${data.image.url}`} alt="" />
      </div>
      <div className='mem1_news_single_pagenews_detail_maine'>
       <div><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, vitae. Tempora odio minus suscipit doloremque voluptates repudiandae quae earum sapiente quod cumque! Incidunt accusamus expedita beatae eum ut! Esse, doloremque.</p></div>
