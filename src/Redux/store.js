@@ -1,9 +1,9 @@
-import React from 'react'
+import { legacy_createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { authReducer } from "./AuthReducer/reducer";
 
-const store = () => {
-  return (
-    <div>store</div>
-  )
-}
+const rootReducer = combineReducers({
+	auth: authReducer,
+});
 
-export default store
+export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));

@@ -1,6 +1,12 @@
-import { Box, Flex, Image, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Image, Spacer, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
+import BellIcon from "./BellIcon";
+import DarkAndLightMode from "./DarkAndLightMode";
+import FantasyNav from "./FantasyNav";
+import LoginAndSignUp from "./LoginAndSignUp";
 import NavMenuText from "./NavMenuText";
+import SearchBar from "./SearchBar";
+import Translator from "./Translator";
 
 const links = [
 	{
@@ -117,9 +123,18 @@ const links = [
 	},
 ];
 
+const fantasy = {
+	name: "Fantasy",
+	img: "https://wassets.hscicdn.com/static/images/fantasy-home.png",
+};
+
 const NavBar = () => {
+	//Navbar Colors
+
+	const bg = useColorModeValue("rgb(3,169,244)", "#222021");
+	const color = useColorModeValue("whitesmoke", "white");
 	return (
-		<Box bg="tomato" w="100%" background="rgb(3,169,244)" color="white">
+		<Box bg="tomato" w="100%" background={bg} color={color}>
 			<Box mx={110}>
 				{/* website logo */}
 				<Flex>
@@ -148,13 +163,17 @@ const NavBar = () => {
 					<Spacer />
 					<Box>
 						<Flex color="white">
-							{links.map((item) => (
-								<NavMenuText
-									name={item.name}
-									leftDropDown={item.left}
-									rightDropDown={item.right}
-								/>
-							))}
+							<FantasyNav name={fantasy.name} image={fantasy.img} />
+							<NavMenuText
+								name="Edition IN"
+								leftDropDown={["India", "UAE", "USA"]}
+								rightDropDown={["England", "AUstralia", "Canada"]}
+							/>
+							<DarkAndLightMode />
+							<BellIcon />
+							<Translator leftDropDown={["English", "Hindi"]} />
+							<LoginAndSignUp />
+							<SearchBar />
 						</Flex>
 					</Box>
 				</Flex>
