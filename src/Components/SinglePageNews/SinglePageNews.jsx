@@ -17,6 +17,7 @@ export default function SinglePageNews() {
     useEffect(()=>{
       Getdata_func(dispatch).then((res)=>{
         console.log(res.payload)
+        console.log(res.payload)
    let arr = (res.payload).filter((el)=>{
       return  el.id===id?el:false
     })
