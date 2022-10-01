@@ -5,11 +5,11 @@
 
 .mem1_single_page_container{
     margin: auto;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     width: 80%;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
     height: auto;
     overflow: none;
 }
@@ -23,11 +23,13 @@
 
 .mem1_big_adv_img{
     margin: auto;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 1000px;
     height: 250px;
     margin-bottom: 10px;
     margin-top: 10px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
 
 }
 .mem1_big_adv_img>img{
@@ -36,22 +38,30 @@
 }
 /*  ADVERT ADVERT ADVERT ADVERT ADVERTADVERT  ADVERT ADVERT ADVERT ADVERT */
 .mem1_news_single_pageaddver_Parent{
-    border: 1px solid black;
+    /* border: 1px solid yellow; */
     width: 30%;
-    height:fit-content;
+    height:80vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  /* position: fixed;
+  top: 200px;
+  left: 100px; */
 }
 .mem1_news_single_pageaddver_Parent_img{
 width: 100%;
+height: fit-content;
+
 
 }
 .mem1_news_single_pageaddver_Parent_img>img{
     width: 100%;
+   height: 100%;
     
     }
 
 /* mem_single_pagenews_Parent mem_single_pagenews_Parent mem_single_pagenews_Parent mem_single_pagenews_Parent */
 .mem1_news_single_pagenews_Parent{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 70%;
     height:100%;
     display: flex;
@@ -59,14 +69,18 @@ width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
 
 /*    headline headline headline headlineheadlineheadline headline headline  headlineheadline headlineheadline */
 .mem1_news_single_pagenews_headline_div{
-    border: 1px solid goldenrod;
+    /* border: 1px solid goldenrod; */
     width: 80%;
     height: 15%;
-    line-height: 25px;
+    /* line-height: 25px; */
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border-radius: 10px;
 }
 .mem1_news_single_pagenews_headline_div>h2{
   color: #03A9F4;
@@ -83,16 +97,20 @@ width: 100%;
 
 /*top image top image top image top image top image top image top image top image top image top image */
 
-.mem1_news_single_pagenews_Parent_img1{
-    border: 1px solid brown;
+/* .mem1_news_single_pagenews_Parent_img1{
+    border: 1px solid blue;
 
-  height: 20%;
+  height:fit-content;
   width: 80%;
 border-radius: 10px;
-}
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+} */
 .mem1_news_single_pagenews_Parent_img1>img{
     width: 100%;
     height: 100%;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 border-radius: 10px;
 
 }
@@ -108,18 +126,19 @@ border-radius: 10px;
 
 /* single_pagenews_detail_maine single_pagenews_detail_maine single_pagenews_detail_maine single_pagenews_detail_maine  */
 .mem1_news_single_pagenews_detail_maine{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 
-   height: 70%;
-   width: 80%;
+   height: fit-content;
+   width: 90%;
    display: grid;
    grid-template-columns: repeat(1,1fr);
-   grid-template-rows: repeat(4,1fr);
- row-gap: 20px;
+   grid-template-rows: repeat(auto);
+ row-gap: 0px;
 }
 .mem1_news_single_pagenews_detail_maine>div{
-    border: 1px solid black;
-     font-size: 16;
+    /* border: 1px solid black; */
+     font-size: 20px;
+     height: fit-content;
 }
 .mem1_news_single_pagenews_detail_maine>div>p{
     text-align: left;
@@ -129,10 +148,10 @@ border-radius: 10px;
 
 
 @media screen and (min-width:200px) and (max-width:1246px){
-    .mem1_single_page_container{
+    /* .mem1_single_page_container{
    height: 300vh;
    
-    } 
+    }  */
     .mem1_news_single_pagenews_headline_div{
 height: 25%;
 
@@ -146,4 +165,18 @@ height: 25%;
     .mem1_big_adv_img{
         display: none;
     }
+}
+@media screen and (min-width:200px) and (max-width:780px){
+    .mem1_news_single_pagenews_headline_div>h2{
+        color: #03A9F4;
+        font-size: 14px;
+      }
+      .mem1_news_single_pagenews_headline_div>h3{
+         
+          font-size: 20px;
+        }
+        .mem1_news_single_pagenews_headline_div>h5{
+         
+          font-size: 14px;
+        }
 }
