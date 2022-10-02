@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Welcome to CricInfo Clone! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Introduction**
+---
+ESPN cricinfo  is a sports news website exclusively for the game of cricket. The site features news, articles, live coverage of cricket matches including liveblogs and scorecards, and StatsGuru, a database of historical matches and players from the 18th century to the present.
+CricInfo was launched on 15 March 1993 by Simon King, a British researcher at the University of Minnesota. It grew with help from students and researchers at universities around the world. Contrary to some reports, Badri Seshadri, who was very instrumental in CricInfo's early growth, did not become involved in CricInfo until some months after its founding.
 
-## Available Scripts
+##  Tech-stack used
+  
+   ```
+   Frontend : React, Redux , Chakra UI
+   
+   Backend   : Local-storage, Advanced Javascript , APIs , Axios , 
+   ```
+ ## Team members and contribution
 
-In the project directory, you can run:
+ | Team Member            | Contribution                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| Vishal Sharma | Home Page |
+| Atul Kumar | Signup, Login Page and NavBar |
+| Rajat Soni | Live Score Page |
+| Aamir Khan | Single News Page |
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ | Serial No            | Feature                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| 1 | User signup and Login |
+| 2 | Dynamic Live Score feature |
+| 3 | Dynamic Data fetched from Api |
+| 4 | News and Blogs to know more about match details |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+  
+  
+  **Sample Page Images**
+  ---
+  
+  **1) Home Page**
+  ---
+  
+  
+  
+  **2) User Login Page**
+   ---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+  **3) Products Page**
+  ---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  **4) Product Display Page**
+  ---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+  **5) Cart Page**
+  ---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  **6) Address Details Page**
+  ---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  **7) Payment Page**
+  ---
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
