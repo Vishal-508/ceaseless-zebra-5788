@@ -1,0 +1,7 @@
+export const AUTH_SUCCESS = "AUTH_SUCCESS";
+export const AUTH_REQUEST = "AUTH_REQUEST";
+export const AUTH_FAILURE = "AUTH_FAILURE";
+
+export const GOOGLE_SUCCESS = "GOOGLE_SUCCESS";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
