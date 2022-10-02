@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import MainRoute from './Routes/MainRoute';
+import "./App.css";
+import MainRoute from "./Routes/MainRoute";
 
 function App() {
-  return (
-    <div className="App">
-      <MainRoute/>
-    </div>
-  );
+	return (
+		<div className="App">
+			<MainRoute />
+		</div>
+	);
 }
 
 export default App;

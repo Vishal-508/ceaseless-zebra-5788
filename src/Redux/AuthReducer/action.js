@@ -9,8 +9,6 @@ import {
 import {
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
-	// signOut,
-	// onAuthStateChanged,
 	GoogleAuthProvider,
 	signInWithPopup,
 } from "firebase/auth";
