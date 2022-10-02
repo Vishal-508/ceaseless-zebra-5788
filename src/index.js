@@ -10,14 +10,12 @@ import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<React.StrictMode>
-		<ChakraProvider>
-			<Provider store={store}>
-				<ColorModeScript initialColorMode={theme.config.initialColorMode} />
-				<App />
-			</Provider>
-		</ChakraProvider>
-	</React.StrictMode>
+	<ChakraProvider>
+		<Provider store={store}>
+			<ColorModeScript initialColorMode={theme.config.initialColorMode} />
+			<App />
+		</Provider>
+	</ChakraProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -3,7 +3,6 @@ import {
 	Modal,
 	ModalOverlay,
 	ModalContent,
-	ModalHeader,
 	ModalFooter,
 	ModalBody,
 	ModalCloseButton,
@@ -24,15 +23,14 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FaUserAlt } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { LoginData, Signup } from "../Redux/AuthReducer/action";
+import { useDispatch } from "react-redux";
+import { LoginData, Signup, Signup_google } from "../Redux/AuthReducer/action";
 
 const LoginAndSignUp = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	const initialRef = React.useRef(null);
 
-	const user = useSelector((state) => state.auth.token);
 	const dispatch = useDispatch();
 
 	//SignUp
@@ -45,13 +43,19 @@ const LoginAndSignUp = () => {
 
 	const SendingSignUp = () => {
 		dispatch(Signup(email, password));
+		onClose();
 	};
 
 	const SendingLogin = () => {
 		dispatch(LoginData(emailLogin, passwordLogin));
+		onClose();
 	};
 
-	console.log("user info", user);
+	const LoginUsingGoogle = () => {
+		dispatch(Signup_google());
+		onClose();
+	};
+
 	return (
 		<>
 			<Button
@@ -100,6 +104,7 @@ const LoginAndSignUp = () => {
 									<FormControl mt={4}>
 										<FormLabel>Password</FormLabel>
 										<Input
+											type="password"
 											placeholder="Enter your password"
 											onChange={(e) => setPasswordLogin(e.target.value)}
 										/>
@@ -144,6 +149,7 @@ const LoginAndSignUp = () => {
 									bg="whitesmoke"
 									color="black"
 									p={6}
+									onClick={LoginUsingGoogle}
 								>
 									<Image
 										src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
@@ -168,6 +174,7 @@ const LoginAndSignUp = () => {
 										<FormLabel>Password</FormLabel>
 										<Input
 											placeholder="Enter your password"
+											type="password"
 											onChange={(e) => setPassword(e.target.value)}
 										/>
 									</FormControl>

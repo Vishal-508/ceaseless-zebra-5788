@@ -32,7 +32,7 @@ const NavMenuText = ({ name, leftDropDown, rightDropDown }) => {
 				<Flex>
 					<Box px={2}>
 						{leftDropDown.map((item) => (
-							<MenuItem minW={200} _hover={{ bg: "#bfeaff" }}>
+							<MenuItem key={item} minW={200} _hover={{ bg: "#bfeaff" }}>
 								{item}
 							</MenuItem>
 						))}
@@ -40,7 +40,7 @@ const NavMenuText = ({ name, leftDropDown, rightDropDown }) => {
 
 					<Box px={2}>
 						{rightDropDown?.map((item) => (
-							<MenuItem minW={200} _hover={{ bg: "#bfeaff" }}>
+							<MenuItem key={item} minW={200} _hover={{ bg: "#bfeaff" }}>
 								{item}
 							</MenuItem>
 						))}

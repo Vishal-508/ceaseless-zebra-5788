@@ -32,7 +32,7 @@ const Translator = ({ leftDropDown }) => {
 				<MenuList onMouseEnter={onOpen} onMouseLeave={onClose} color="black">
 					<Box px={2}>
 						{leftDropDown.map((item) => (
-							<MenuItem minW={200} _hover={{ bg: "#bfeaff" }}>
+							<MenuItem key={item} minW={200} _hover={{ bg: "#bfeaff" }}>
 								{item}
 							</MenuItem>
 						))}

@@ -1,12 +1,12 @@
 import { Box, Flex, Image, Spacer, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import BellIcon from "./BellIcon";
-import DarkAndLightMode from "./DarkAndLightMode";
-import FantasyNav from "./FantasyNav";
+import { useSelector } from "react-redux";
+// import { Link } from "react-router-dom";
+
 import LoginAndSignUp from "./LoginAndSignUp";
+import LogOut from "./LogOut";
+import NavBarRight from "./NavBarRight";
 import NavMenuText from "./NavMenuText";
-import SearchBar from "./SearchBar";
-import Translator from "./Translator";
 
 const links = [
 	{
@@ -123,22 +123,21 @@ const links = [
 	},
 ];
 
-const fantasy = {
-	name: "Fantasy",
-	img: "https://wassets.hscicdn.com/static/images/fantasy-home.png",
-};
-
 const NavBar = () => {
 	//Navbar Colors
 
 	const bg = useColorModeValue("rgb(3,169,244)", "#222021");
 	const color = useColorModeValue("whitesmoke", "white");
+
+	const user = useSelector((state) => state.auth);
+
 	return (
 		<Box bg="tomato" w="100%" background={bg} color={color}>
 			<Box mx={110}>
 				{/* website logo */}
 				<Flex>
 					<Box>
+						{/* <Link to={"/"}> */}
 						<Image
 							src="https://wassets.hscicdn.com/static/images/logo.png"
 							alt="ESPNcricinfo"
@@ -146,12 +145,14 @@ const NavBar = () => {
 							mx={10}
 							my={4}
 						/>
+						{/* </Link> */}
 					</Box>
 					{/* menu items */}
 					<Box>
 						<Flex color="white">
 							{links.map((item) => (
 								<NavMenuText
+									key={item.name}
 									name={item.name}
 									leftDropDown={item.left}
 									rightDropDown={item.right}
@@ -163,17 +164,9 @@ const NavBar = () => {
 					<Spacer />
 					<Box>
 						<Flex color="white">
-							<FantasyNav name={fantasy.name} image={fantasy.img} />
-							<NavMenuText
-								name="Edition IN"
-								leftDropDown={["India", "UAE", "USA"]}
-								rightDropDown={["England", "AUstralia", "Canada"]}
-							/>
-							<DarkAndLightMode />
-							<BellIcon />
-							<Translator leftDropDown={["English", "Hindi"]} />
-							<LoginAndSignUp />
-							<SearchBar />
+							<NavBarRight />
+							{/* login and logout feature */}
+							{user.token === "" ? <LoginAndSignUp /> : <LogOut />}
 						</Flex>
 					</Box>
 				</Flex>

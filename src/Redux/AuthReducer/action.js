@@ -3,14 +3,14 @@ import {
 	AUTH_REQUEST,
 	AUTH_SUCCESS,
 	GOOGLE_SUCCESS,
-	LOGIN_SUCESS,
+	LOGIN_SUCCESS,
 	LOGOUT_SUCCESS,
 } from "./actionTypes";
 import {
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
-	signOut,
-	onAuthStateChanged,
+	// signOut,
+	// onAuthStateChanged,
 	GoogleAuthProvider,
 	signInWithPopup,
 } from "firebase/auth";
@@ -21,7 +21,7 @@ export const Signup = (email, password) => async (dispatch) => {
 	dispatch({ type: AUTH_REQUEST });
 	try {
 		let res = await createUserWithEmailAndPassword(auth, email, password);
-		console.log(res);
+		//console.log(res);
 		dispatch({ type: AUTH_SUCCESS, payload: res.user.uid });
 	} catch (err) {
 		alert(err);
@@ -34,19 +34,23 @@ export const LoginData = (email, password) => async (dispatch) => {
 	try {
 		let res = await signInWithEmailAndPassword(auth, email, password);
 		console.log(res);
-		dispatch({ type: LOGIN_SUCESS, payload: res.user.uid });
+		dispatch({ type: LOGIN_SUCCESS, payload: res.user.uid });
 	} catch (err) {
 		dispatch({ type: AUTH_FAILURE });
 		alert(err);
 	}
 };
 
-export const Sigup_google = () => async (dispatch) => {
+export const Signup_google = () => async (dispatch) => {
 	try {
 		const googleauth = new GoogleAuthProvider();
 		const res = await signInWithPopup(auth, googleauth);
 		console.log(res);
-		dispatch({ type: GOOGLE_SUCCESS, payload: res.user.uid });
+		dispatch({
+			type: GOOGLE_SUCCESS,
+			// payload: res.user.uid,
+			payload: { token: res.user.uid, photo: res.user.photoURL },
+		});
 		// return signInWithPopup(auth, googleauth)
 	} catch (err) {
 		dispatch({ type: AUTH_FAILURE });

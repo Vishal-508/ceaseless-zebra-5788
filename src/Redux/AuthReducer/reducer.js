@@ -3,7 +3,7 @@ import {
 	AUTH_REQUEST,
 	AUTH_SUCCESS,
 	GOOGLE_SUCCESS,
-	LOGIN_SUCESS,
+	LOGIN_SUCCESS,
 	LOGOUT_SUCCESS,
 } from "./actionTypes";
 
@@ -12,6 +12,9 @@ const initialData = {
 	isError: false,
 	isAuth: false,
 	token: localStorage.getItem("token") || "",
+	photourl:
+		localStorage.getItem("photourl") ||
+		"https://toppng.com//public/uploads/preview/avatar-png-11554021819gij72acuim.png",
 };
 
 export const authReducer = (state = initialData, { type, payload }) => {
@@ -19,46 +22,49 @@ export const authReducer = (state = initialData, { type, payload }) => {
 		case AUTH_REQUEST: {
 			return {
 				...state,
-				loading: true,
+				isLoading: true,
 			};
 		}
 
 		case AUTH_SUCCESS: {
-			localStorage.setItem("token", payload.token);
+			localStorage.setItem("token", payload);
 			return {
 				...state,
-				loading: false,
-				error: false,
+				isLoading: false,
+				isError: false,
 				isAuth: true,
 				token: payload,
 			};
 		}
-		case LOGIN_SUCESS: {
-			localStorage.setItem("token", payload.token);
+		case LOGIN_SUCCESS: {
+			localStorage.setItem("token", payload);
 			return {
 				...state,
-				loading: false,
-				error: false,
+				isLoading: false,
+				isError: false,
 				isAuth: true,
 				token: payload,
 			};
 		}
 
 		case GOOGLE_SUCCESS: {
+			localStorage.setItem("token", payload.token);
+			localStorage.setItem("photourl", payload.photo);
 			return {
 				...state,
-				loading: false,
-				error: false,
+				isLoading: false,
+				isError: false,
 				isAuth: true,
-				token: payload,
+				token: payload.token,
+				photourl: payload.photo,
 			};
 		}
 
 		case AUTH_FAILURE: {
 			return {
 				...state,
-				loading: false,
-				error: true,
+				isLoading: false,
+				isError: true,
 				isAuth: false,
 			};
 		}
@@ -67,8 +73,8 @@ export const authReducer = (state = initialData, { type, payload }) => {
 			localStorage.removeItem("token");
 			return {
 				...state,
-				loading: false,
-				error: false,
+				isLoading: false,
+				isError: false,
 				isAuth: false,
 				token: "",
 			};
