@@ -14,7 +14,7 @@ const HomeDataList = () => {
   console.log(Data);
   return (
     <>
-    {Data.length>0 && Data.map(item=><SingleHomeData key={item.id} {...item} /> )}
+    {Data.length>0 && Data.map(item=><SingleHomeData key={item.scribeId} {...item} /> )}
     </>
   )
 };

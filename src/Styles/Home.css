@@ -1,3 +1,27 @@
-/* .tl-home-container{
-    
-} */
+.tl-home-container{
+    width: 77.4rem;
+    /* position: relative; */
+    margin:  auto ;
+    background: rgb(249,249,251);
+    /* border: 1px solid black; */
+}
+.tl-left-container{
+    /* border: 1px solid blue; */
+    width: 20%;
+   align-self: flex-start;
+   position:sticky;
+   top: 0;
+    border-radius: 10px;
+}
+.tl-middle-container{
+    /* border: 1px solid rgb(58, 30, 30);   */
+    width: 55%;  
+}
+.tl-right-container{
+    /* border: 1px solid maroon; */
+    width: 25%;   
+    align-self: flex-start;
+    border-radius: 10px; 
+    /* position:sticky; */
+    top: 0;
+}
