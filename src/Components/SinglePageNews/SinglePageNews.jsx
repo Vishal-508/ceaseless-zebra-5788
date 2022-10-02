@@ -12,6 +12,7 @@ export default function SinglePageNews() {
     // let newsdata =useSelector((store)=>{
     //   return store.newsdata
     // })
+    console.log(id)
   id=Number(id)
     console.log(typeof Number(id))
     useEffect(()=>{

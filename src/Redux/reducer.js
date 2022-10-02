@@ -13,9 +13,7 @@ const reducer=(state=initialstate ,action )=>{
      case GET_NEWSDATA_SUCCESS:return {...state,isLoading:false,newsdata:payload};
      case GET_NEWSDATA_FAILURE:return {...state,isErr:true,isLoading:false,newsdata:[]};
 
-    //  case GET_SINGLENEWSDATA_REQUEST:return {...state,isLoading:true};
-    //  case GET_SINGLENEWSDATA_SUCCESS:return {...state,isLoading:false,newsdata:[...state.newsdata,payload]};
-    //  case GET_SINGLENEWSDATA_FAILURE:return {...state,isErr:true,isLoading:false,newsdata:[]};
+
 
      default:return state
   }

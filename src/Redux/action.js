@@ -11,16 +11,5 @@ let Getdata_func=(dispatch)=>{
 
   })
 }
-// const Getdata_func2=(dispatch,id)=>{
-//   dispatch({type:GET_SINGLENEWSDATA_REQUEST})
-//   console.log(id)
-//   return axios.get(`http://localhost:8080/results/${id}`).then((res)=>{
-//     console.log(res.data)
-//    return  dispatch({type:GET_SINGLENEWSDATA_SUCCESS,payload:res.data})
-//   }).catch((err)=>{
-//     console.log(err)
-//     dispatch({type:GET_SINGLENEWSDATA_FAILURE,payload:err})
 
-//   })
-// }
 export {Getdata_func}
