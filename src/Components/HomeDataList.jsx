@@ -7,16 +7,17 @@ const HomeDataList = () => {
 	const dispatch = useDispatch();
 	const Data = useSelector((store) => store.AppReducer.homeData);
 
-	useEffect(() => {
-		dispatch(getHomeData());
-	}, []);
-	console.log(Data);
-	return (
-		<>
-			{Data.length > 0 &&
-				Data.map((item) => <SingleHomeData key={item.id} {...item} />)}
-		</>
-	);
+
+  useEffect(() => {
+    dispatch(getHomeData());
+  }, []);
+  console.log(Data);
+  return (
+    <>
+    {Data.length>0 && Data.map(item=><SingleHomeData key={item.scribeId} {...item} /> )}
+    </>
+  )
+
 };
 
 export default HomeDataList;
