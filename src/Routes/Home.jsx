@@ -3,9 +3,13 @@ import "../Styles/Home.css";
 import HomeDataList from "../Components/HomeDataList"
 import HomeLeftBar from '../Components/HomeLeftBar';
 import HomeRightBar from '../Components/HomeRightBar';
+import NavBar from '../Components/Navbar';
 const Home = () => {
  
   return (
+    <div>
+
+    {/* <NavBar/> */}
    <Center className='tl-home-container' >
     
       <Box className='tl-left-container' >
@@ -18,6 +22,7 @@ const Home = () => {
         <HomeRightBar/>
       </Box>
    </Center>
+    </div>
   )
 }
 
