@@ -1,0 +1,39 @@
+.tl-single-card{
+    box-sizing: border-box;
+    border: 1px solid  rgb(237,238,240);
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    background: white;
+    margin: 0px 20px 20px;
+    /* margin-bottom: 20px; */
+    /* border-color: rgba(var(--color-line-default),var(--tw-border-opacity)); */
+}
+.tl-single-image{
+    border-radius: 10px;
+
+
+}
+.tl-single-image:hover{
+    overflow: hidden;
+    width: 110%;
+
+}
+
+
+.tl-single-title{
+font-size: 20px;
+color: #2B2C2D;
+font-weight: bold;
+margin: 10px 0;
+line-height: 1.7rem;
+}
+.tl-single-summary{
+    line-height: 1.4rem;
+    color: #48494A;
+ 
+    border-top: 1px solid  rgb(237,238,240);
+    font-weight: 400;
+    padding-top: 10px;
+}
