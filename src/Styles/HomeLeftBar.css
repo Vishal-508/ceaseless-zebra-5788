@@ -5,10 +5,11 @@
 
 .tl-left-first-sub{
     width: 15.375rem;
-    background: white;
+    /* background: white; */
+   
     border-radius: 10px;
     padding: 20px;
-    border: 1px solid  rgb(237,238,240);
+    /* border: 1px solid  rgb(237,238,240); */
     /* overflow-x: scroll; */
     /* scroll-behavior: smooth; */
     flex-direction: column;
@@ -22,7 +23,7 @@
 }
 .tl-left-first-sub>p{
     display: block;
-    color: #48494ad5;
+    /* color: #48494ad5; */
     /* width: 100%; */
     /* font-weight: 700; */
 }
@@ -37,14 +38,14 @@
 }
 .tl-left-second-sub{
     flex-direction: column;
-    background: white;
+    /* background: white; */
     font-size: 13px;
     border-radius: 10px;
-    border: 1px solid  rgb(237,238,240);
+    /* border: 1px solid  rgb(237,238,240); */
 }
 .tl-list-title{
     padding: 10px 20px;
-    border-bottom:1px solid  rgb(237,238,240) ;
+    /* border-bottom:1px solid  rgb(237,238,240) ; */
     font-size: 13px;
     font-weight: 500;
     text-align: left;

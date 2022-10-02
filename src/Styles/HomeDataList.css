@@ -1,7 +1,7 @@
 .tl-home-container {
     font-family: BentonSans,Arial,Noto Sans,sans-serif;
     --tw-text-opacity: 1;
-    color: rgba(var(--color-typo-paragraph),var(--tw-text-opacity));
+    /* color: rgba(var(--color-typo-paragraph),var(--tw-text-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgba(var(--color-fill-canvas),var(--tw-bg-opacity));
+    background-color: rgba(var(--color-fill-canvas),var(--tw-bg-opacity)); */
 }

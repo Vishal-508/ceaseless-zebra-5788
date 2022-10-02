@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Center, Flex, Image, List, ListIcon, ListItem, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Image, List, ListIcon, ListItem, Text, useColorModeValue } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect } from "react";
 import "../Styles/HomeLeftBar.css";
@@ -11,20 +11,22 @@ const getGlobalData=()=>{
 }
 
 const HomeLeftBar = () => {
-
+  const middle_bg = useColorModeValue("#fff", "rgba(72,73,74,0.88)");
+	const middle_color = useColorModeValue("#2B2C2D", "white");
+  const border_color = useColorModeValue("1px solid rgb(237,238,240)",  '1px solid rgb(81, 83, 84)')
 useEffect(()=>{
   getGlobalData()
 },[])
   return (
-    <Box className="tl-left-container">
-      <Center className="tl-left-first-sub">
+    <Box className="tl-left-container"  >
+      <Center className="tl-left-first-sub" borderTop={border_color} bg={middle_bg} color={middle_color} border={border_color} >
         <Image src="https://wassets.hscicdn.com/static/images/nlp-logo.svg" />
         <Text>
           What is Tim David's strike rate in the death overs in T20s since 2021?
         </Text>
         <Box>Ask a question</Box>
       </Center>
-      <Flex className="tl-left-second-sub">
+      <Flex className="tl-left-second-sub"  bg={middle_bg} color={middle_color} border={border_color} >
         <Box className="tl-list-title" >Key Series</Box>
         <List spacing={1} className="tl-list-container" >
           <ListItem>

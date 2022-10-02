@@ -21,4 +21,4 @@ const reducer=(state=initialstate ,action )=>{
   }
  
 }
-export default reducer
+export  {reducer}

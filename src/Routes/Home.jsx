@@ -1,26 +1,31 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box, Center, Flex, useColorModeValue } from '@chakra-ui/react';
 import "../Styles/Home.css";
 import HomeDataList from "../Components/HomeDataList"
 import HomeLeftBar from '../Components/HomeLeftBar';
 import HomeRightBar from '../Components/HomeRightBar';
 import NavBar from '../Components/Navbar';
 const Home = () => {
- 
+  const bg = useColorModeValue("rgb(249,249,251)", "#000");
+	const color = useColorModeValue("#2B2C2D", "white");
+
+  
   return (
     <div>
 
     {/* <NavBar/> */}
-   <Center className='tl-home-container' >
-    
+   <Center  w="100%" bg={bg} color={color} pt="50px" >
+    <Flex  margin="auto" className='tl-home-container' bg={bg} color={color} >
+
       <Box className='tl-left-container' >
         <HomeLeftBar/>
       </Box>
-      <Box className='tl-middle-container' >
+      <Box className='tl-middle-container'  >
         <HomeDataList />
       </Box>
       <Box className='tl-right-container' >
         <HomeRightBar/>
       </Box>
+    </Flex>
    </Center>
     </div>
   )

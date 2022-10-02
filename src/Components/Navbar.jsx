@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Spacer, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import LoginAndSignUp from "./LoginAndSignUp";
 import LogOut from "./LogOut";
@@ -132,12 +132,12 @@ const NavBar = () => {
 	const user = useSelector((state) => state.auth);
 
 	return (
-		<Box bg="tomato" w="100%" background={bg} color={color}>
+		<Box w="100%" background={bg} color={color}  box-shadow=" rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" >
 			<Box mx={110}>
 				{/* website logo */}
 				<Flex>
 					<Box>
-						{/* <Link to={"/"}> */}
+						<Link to={"/"}>
 						<Image
 							src="https://wassets.hscicdn.com/static/images/logo.png"
 							alt="ESPNcricinfo"
@@ -145,7 +145,7 @@ const NavBar = () => {
 							mx={10}
 							my={4}
 						/>
-						{/* </Link> */}
+						</Link>
 					</Box>
 					{/* menu items */}
 					<Box>

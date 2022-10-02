@@ -1,14 +1,16 @@
+import { Button } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { Getdata_func, Getdata_func2 } from '../../Redux/action'
-import "./SinglePageNews.css"
+import { Getdata_func, } from '../../Redux/SinglePageReducer/action'
+import styles from "./SinglePageNews.module.css"
 export default function SinglePageNews() {
   let [data,setData]=useState([])
     let dispatch=useDispatch()
     let {id}=useParams()
+    console.log(id, data)
     // let newsdata =useSelector((store)=>{
     //   return store.newsdata
     // })
@@ -16,8 +18,8 @@ export default function SinglePageNews() {
     console.log(typeof Number(id))
     useEffect(()=>{
       Getdata_func(dispatch).then((res)=>{
-        console.log(res.payload)
-        console.log(res.payload)
+        // console.log(res.payload)
+        // console.log(typeof res.payload)
    let arr = (res.payload).filter((el)=>{
       return  el.id===id?el:false
     })
@@ -40,19 +42,21 @@ export default function SinglePageNews() {
 
  if(data)
   return (
-    <div className='mem1_div1'>
+
+    <div className={styles.mem1_div1}>
+      <Button size={["sm","md", "lg", "xl"]} >testing</Button>
       
-      <div className='mem1_big_adv_img'>
+      <div className={styles.mem1_big_adv_img}>
     <img src="https://tpc.googlesyndication.com/simgad/8133920793378226490?" alt="" />
       </div>
-    <div className='mem1_single_page_container'>
+    <div className={styles.mem1_single_page_container}>
     {data.map((el)=>(
-<div className='mem1_news_single_pageaddver_Parent'>
+<div className={styles.mem1_news_single_pageaddver_Parent}>
 
  <div>
  <h3>{el.title}</h3>
  </div>
-<div className='mem1_news_single_pageaddver_Parent_img'>
+<div className={styles.mem1_news_single_pageaddver_Parent_img}>
   <img src="https://tpc.googlesyndication.com/simgad/14898303338203898667?" alt="" />
   <h5>{el.seoTitle}</h5>
 </div>
@@ -63,10 +67,10 @@ export default function SinglePageNews() {
    {data.map((el)=>(
       
      
-  <div className='mem1_news_single_pagenews_Parent'>
-    <div className='mem1_news_single_pagenews_headline_div'>
+  <div className={styles.mem1_news_single_pagenews_Parent}>
+    <div className={styles.mem1_news_single_pagenews_headline_div}>
     <Link to={"/"}>
-       <h2 text-decoration={"none"}>{el.genreType}</h2>
+       <h2>{el.genreType}</h2>
        </Link>
        <h3>{el.title}</h3>
        <h5>{el.summary}</h5>
@@ -74,10 +78,10 @@ export default function SinglePageNews() {
 
     </div>
 
-     <div className='mem1_news_single_pagenews_Parent_img1  mem1_news_single_pagenews_Parent_img11'>
+     <div className={styles.mem1_news_single_pagenews_Parent_img1 } id={styles.mem1_news_single_pagenews_Parent_img11} >
       <img src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_50/lsci/${el.image.url}`} alt="" />
      </div>
-     <div className='mem1_news_single_pagenews_detail_maine'>
+     <div className={styles.mem1_news_single_pagenews_detail_maine}>
       <div><p>{el.title}The BCCI president Sourav Ganguly is not yet giving up on injured India strike bowler Jasprit Bumrah turning up in Australia to participate in the T20 World Cup.
 
 Bumrah was rushed to the National Cricket Academy in Bengaluru from Thiruvananthapuram on Wednesday to undergo scans on his back after being ruled out of the ongoing three-match T20I series against South Africa.</p></div>
