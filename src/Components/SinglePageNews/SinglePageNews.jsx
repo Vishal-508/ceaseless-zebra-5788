@@ -1,11 +1,22 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
+import {useColorModeValue} from "@chakra-ui/icon"
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { Getdata_func, Getdata_func2 } from '../../Redux/action'
 import "./SinglePageNews.css"
 export default function SinglePageNews() {
+  const middle_bg = useColorModeValue("#fff", "rgba(72,73,74,0.88)");
+  const middle_color = useColorModeValue("#2B2C2D", "white");
+  const border_color = useColorModeValue("1px solid rgb(237,238,240)",  "1px solid #000");
+
+
+
+
+
+
+
+
   let [data,setData]=useState([])
     let dispatch=useDispatch()
     let {id}=useParams()
@@ -40,7 +51,7 @@ export default function SinglePageNews() {
 
  if(data)
   return (
-    <div className='mem1_div1'>
+    <div className='mem1_div1'  backGroundColor={ middle_bg}>
       
       <div className='mem1_big_adv_img'>
     <img src="https://tpc.googlesyndication.com/simgad/8133920793378226490?" alt="" />
