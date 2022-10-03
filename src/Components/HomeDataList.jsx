@@ -13,7 +13,7 @@ const HomeDataList = () => {
   useEffect(() => {
     dispatch(getHomeData());
   }, []);
-  console.log(Data);
+  
   return (
     <Box  >
     {Data.length>0 && Data.map(item=><SingleHomeData key={item.scribeId} {...item} /> )}

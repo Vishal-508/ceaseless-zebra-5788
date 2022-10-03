@@ -9,10 +9,19 @@ import * as types from "./actionTypes";
     .catch(e=>console.log(e))
 }
 
-export {getHomeData}
+const getGlobalData=()=>(dispatch)=>{
+  dispatch({type:types.GET_HOME_SIDEBAR_DATA_REQUEST})
+  return axios.get("https://hs-consumer-api.espncricinfo.com/v1/global/details?lang=en&appItems=true&followItems=true&siteItems=true&featuredItems=true&allTeams=true")
+  .then(r=>{ dispatch({type:types.GET_HOME_SIDEBAR_DATA_SUCCESS,payload:(r.data)});console.log(r.data)})
+  .catch(e=>console.log(e))
+}
+
+export {getHomeData, getGlobalData}
 
 // ,console.log(r.data.results)
 
 // https://hs-consumer-api.espncricinfo.com/v1/edition/recent-stories?lang=en&edition=in
 
 // https://hs-consumer-api.espncricinfo.com/v1/edition/feed?edition=in&lang=en&page=1&records=10
+
+// dispatch({type:types.GET_HOME_SIDEBAR_DATA_SUCCESS,payload:(r) }  );

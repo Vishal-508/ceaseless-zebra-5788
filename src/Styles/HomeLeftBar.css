@@ -35,12 +35,17 @@
     width: 100%;
     color: rgb(3,169,244);
     border: 1px solid rgb( 3,169,244);
+    cursor: pointer;
 }
-.tl-left-second-sub{
+.tl-left-first-sub div:hover{
+    background:rgba(3,169,244,0.2);
+}
+.tl-list-sub-container{
     flex-direction: column;
     /* background: white; */
     font-size: 13px;
     border-radius: 10px;
+    margin-bottom: 20px;
     /* border: 1px solid  rgb(237,238,240); */
 }
 .tl-list-title{
