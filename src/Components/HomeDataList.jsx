@@ -14,7 +14,7 @@ const HomeDataList = () => {
 	return (
 		<>
 			{Data.length > 0 &&
-				Data.map((item) => <SingleHomeData key={item.id} {...item} />)}
+				Data.map((item) => <SingleHomeData key={item.scribeId} {...item} />)}
 		</>
 	);
 };
