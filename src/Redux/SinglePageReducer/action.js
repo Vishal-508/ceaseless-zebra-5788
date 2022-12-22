@@ -2,9 +2,9 @@ import { GET_NEWSDATA_FAILURE, GET_NEWSDATA_REQUEST, GET_NEWSDATA_SUCCESS, GET_S
 import axios from "axios"
 let Getdata_func=(dispatch)=>{
   dispatch({type:GET_NEWSDATA_REQUEST})
-  return axios.get("https://hs-consumer-api.espncricinfo.com/v1/edition/recent-stories?lang=en&edition=in").then((res)=>{
+  return axios.get("http://localhost:8080/stories").then((res)=>{
     console.log(res)
-   return dispatch({type:GET_NEWSDATA_SUCCESS,payload:res.data.stories})
+   return dispatch({type:GET_NEWSDATA_SUCCESS,payload:res.data})
   }).catch((err)=>{
     console.log(err)
     dispatch({type:GET_NEWSDATA_FAILURE,payload:err})

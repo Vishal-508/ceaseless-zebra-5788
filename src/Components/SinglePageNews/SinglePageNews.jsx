@@ -18,7 +18,7 @@ export default function SinglePageNews() {
     console.log(typeof Number(id))
     useEffect(()=>{
       Getdata_func(dispatch).then((res)=>{
-        // console.log(res.payload)
+        console.log(res)
         // console.log(typeof res.payload)
    let arr = (res.payload).filter((el)=>{
       return  el.id===id?el:false
@@ -32,7 +32,7 @@ export default function SinglePageNews() {
      
     
      
-    },[])
+    },[dispatch])
 
 //  { data.map((el)=>{
 //     console.log(el.title)

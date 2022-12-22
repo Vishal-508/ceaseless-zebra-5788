@@ -1,0 +1,12 @@
+.scrolltop_icon{
+   
+    border-radius: 20px !important;
+    background-color: darkorange !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    margin-top: 50px;
+}
