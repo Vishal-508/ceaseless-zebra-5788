@@ -3,6 +3,7 @@ import "../Styles/Home.css";
 import HomeDataList from "../Components/HomeDataList"
 import HomeLeftBar from '../Components/HomeLeftBar';
 import HomeRightBar from '../Components/HomeRightBar';
+
 import NavBar from '../Components/Navbar';
 const Home = () => {
   const bg = useColorModeValue("rgb(249,249,251)", "#000");
