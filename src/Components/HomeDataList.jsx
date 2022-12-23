@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getHomeData } from "../Redux/AppReducer/action";
 import Footer from "./Footer/Footer";
 import SingleHomeData from "./SingleHomeData";
+import Topimage from "./TopImage/Topimage";
 
 const HomeDataList = () => {
 	const dispatch = useDispatch();
@@ -16,11 +17,14 @@ const HomeDataList = () => {
   }, []);
   
   return (
+   
+     
     <Box  >
+     
     {Data.length>0 && Data.map(item=><SingleHomeData key={item.scribeId} {...item} /> )}
     
     </Box>
-  
+ 
   )
 
 };

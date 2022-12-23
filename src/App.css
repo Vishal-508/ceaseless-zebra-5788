@@ -1,5 +1,8 @@
-body{
-    position: relative;
+.App{
+    /* margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 .App>div:last-child{
     background: rgb(249,249,251);

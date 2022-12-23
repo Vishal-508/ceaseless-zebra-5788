@@ -33,7 +33,7 @@ export default function Live() {
     },[])
     // console.log(data)
   return (
-    <div className={style.container}>
+    <div >
         <Tabs align='center'>
             <TabList boxShadow='xs' w={"50%"} rounded={"md"}>
                 <Tab >
