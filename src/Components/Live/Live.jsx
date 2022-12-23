@@ -12,7 +12,7 @@ export default function Live() {
     useEffect(()=>{
         let arr=[]
         let arr2=[]
-        axios.get("http://localhost:8080/matches").then((res)=>{
+        axios.get("https://espnscore.onrender.com/api/matches").then((res)=>{
         //    console.log(res.data)
            for(let i=0;i<res.data.length;i++){
             

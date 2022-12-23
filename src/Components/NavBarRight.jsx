@@ -14,7 +14,7 @@ const fantasy = {
 
 const NavBarRight = () => {
 	return (
-		<Flex>
+		<Flex >
 			<FantasyNav name={fantasy.name} image={fantasy.img} />
 			<NavMenuText
 				name="Edition IN"
