@@ -45,10 +45,10 @@ export default function SinglePageNews() {
 
     <div className={styles.mem1_div1}>
       {/* <Button size={["sm","md", "lg", "xl"]} >testing</Button> */}
-      
+{/*       
       <div className={styles.mem1_big_adv_img}>
     <img src="https://tpc.googlesyndication.com/simgad/8133920793378226490?" alt="" />
-      </div>
+      </div> */}
     <div className={styles.mem1_single_page_container}>
     {data.map((el)=>(
 <div className={styles.mem1_news_single_pageaddver_Parent}>

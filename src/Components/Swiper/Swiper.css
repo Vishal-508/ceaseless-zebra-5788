@@ -15,7 +15,9 @@
     width: 100%;
     height: 200px;
     padding: 25px;
-   background-color: #0398DC
+   background-color: #0398DC;
+   overflow: none;
+   
   }
   
   .swiper-slide {

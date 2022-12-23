@@ -19,7 +19,7 @@ export default function SwiperSlider() {
   useEffect(()=>{
       let arr=[]
       
-      axios.get("http://localhost:8080/matches").then((res)=>{
+      axios.get("https://espnscore.onrender.com/api/matches").then((res)=>{
          console.log(res.data)
          for(let i=0;i<res.data.length;i++){
           
@@ -75,22 +75,22 @@ export default function SwiperSlider() {
               <Image className="flag" src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci${el.teams[0].team.imageUrl}`} />
             <Text color={"green"}>{el.teams[0].team.name}</Text>
             </Box>
-            <Text> {el.teams[0].score}</Text>
+            <Text color={"black"}> {el.teams[0].score}</Text>
             </Box>
             <Box display={"flex"} w={"95%"} justifyContent={"space-between"} >
             <Box display={"flex"} gap={2}>
               <Image className="flag" src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci${el.teams[1].team.imageUrl}`} />
             <Text color={"green"}>{el.teams[1].team.name}</Text>
             </Box>
-            <Text> {el.teams[1].score}</Text>
+            <Text color={"black"}> {el.teams[1].score}</Text>
             </Box>
             <Box display={"flex"} w={"95%"} justifyContent={"space-between"}>
               
-              <Text >{el.statusText}</Text>
+              <Text color={"black"}>{el.statusText}</Text>
 
             </Box>
             <Box display={"flex"} w={"95%"} justifyContent={"space-between"}>
-                 <Text textAlign={"left"}>{el.title}</Text>
+                 <Text color={"black"} textAlign={"left"}>{el.title}</Text>
             </Box>
          
         </SwiperSlide>

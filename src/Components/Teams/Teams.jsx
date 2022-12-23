@@ -51,12 +51,12 @@ export default function Teams() {
             <Box>
           
                 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexDirection={"column"} p={10}>
-                    <Text w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>POPULAR INTERNATIONAL TEAMS</Text>
+                    <Text color={"black"}  w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>POPULAR INTERNATIONAL TEAMS</Text>
 
                     <Grid templateColumns='repeat(3, 1fr)' gap={1} w={"80%"} m={"auto"}>
 
                         {teamInternation.map((el) => (
-                            <Box display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
+                            <Box color={"black"}   display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
                                 <Image src={el.url} w={"25%"} />
                                 <Text fontSize={16} fontWeight={600}>{el.title}</Text>
 
@@ -68,12 +68,12 @@ export default function Teams() {
                     </Grid>
                 </Box>
                 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexDirection={"column"} p={10}>
-                    <Text w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>IPL 2022 TEAMS</Text>
+                    <Text color={"black"}  w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>IPL 2022 TEAMS</Text>
 
                     <Grid templateColumns='repeat(3, 1fr)' gap={1} w={"80%"} m={"auto"}>
 
                         {iplTeams.map((el) => (
-                            <Box display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
+                            <Box color={"black"} display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
                                 <Image src={el.url} w={"25%"} />
                                 <Text fontSize={16} fontWeight={600}>{el.title}</Text>
 
@@ -85,12 +85,12 @@ export default function Teams() {
                     </Grid>
                 </Box>
                 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexDirection={"column"} p={10} mb={10}>
-                    <Text w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>POPULAR WOMEN'S TEAMS</Text>
+                    <Text w={"80%"} display={"flex"} color={"black"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>POPULAR WOMEN'S TEAMS</Text>
 
                     <Grid templateColumns='repeat(3, 1fr)' gap={1} w={"80%"} m={"auto"}>
 
                         {teamsWomens.map((el) => (
-                            <Box display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
+                            <Box color={"black"}  display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
                                 <Image src={el.url} w={"25%"} />
                                 <Text fontSize={16} fontWeight={600}>{el.title}</Text>
 
