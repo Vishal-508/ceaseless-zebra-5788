@@ -3,6 +3,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Live from '../Components/Live/Live'
 import NavBar from '../Components/Navbar'
+import News from '../Components/News/News'
 import SinglePageNews from '../Components/SinglePageNews/SinglePageNews'
 import MultipleItems from '../Components/Swiper/Swiper'
 // import Storage from '../Components/swiper/swiper'
@@ -20,6 +21,9 @@ const MainRoute = () => {
         <Route path='/' element={<Home/>} />
         <Route path='/singlepagenews/:id' element={<SinglePageNews />}/>
         <Route path='/live' element={<Live />}/>
+        <Route path='/news' element={<News />}/>
+
+        
       </Routes>
     </Box>
   )

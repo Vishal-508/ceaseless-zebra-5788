@@ -14,7 +14,7 @@ console.log(sideData)
   const border_color = useColorModeValue("1px solid rgb(237,238,240)",  '1px solid rgb(81, 83, 84)')
   useEffect(()=>{
     dispatch(getGlobalData())
-  },[])
+  },[dispatch])
   return (
     <Box>
 
