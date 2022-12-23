@@ -1,0 +1,8 @@
+.container{
+    margin: auto;
+    /* border: 1px solid red; */
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
