@@ -11,8 +11,12 @@ import * as types from "./actionTypes";
 
 const getGlobalData=()=>(dispatch)=>{
   dispatch({type:types.GET_HOME_SIDEBAR_DATA_REQUEST})
-  return axios.get("https://hs-consumer-api.espncricinfo.com/v1/global/details?lang=en&appItems=true&followItems=true&siteItems=true&featuredItems=true&allTeams=true")
-  .then(r=>{ dispatch({type:types.GET_HOME_SIDEBAR_DATA_SUCCESS,payload:(r.data)});console.log(r.data)})
+  // https://hs-consumer-api.espncricinfo.com/v1/global/details?lang=en&appItems=true&followItems=true&siteItems=true&featuredItems=true&allTeams=true
+  return axios.get("http://localhost:8080/leftandRight")
+  .then(r=>{
+     
+     dispatch({type:types.GET_HOME_SIDEBAR_DATA_SUCCESS,payload:(r.data)});
+   })
   .catch(e=>console.log(e))
 }
 

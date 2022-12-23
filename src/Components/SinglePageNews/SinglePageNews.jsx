@@ -44,7 +44,7 @@ export default function SinglePageNews() {
   return (
 
     <div className={styles.mem1_div1}>
-      <Button size={["sm","md", "lg", "xl"]} >testing</Button>
+      {/* <Button size={["sm","md", "lg", "xl"]} >testing</Button> */}
       
       <div className={styles.mem1_big_adv_img}>
     <img src="https://tpc.googlesyndication.com/simgad/8133920793378226490?" alt="" />

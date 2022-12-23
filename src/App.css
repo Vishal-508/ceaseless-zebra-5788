@@ -1,6 +1,15 @@
-/* body{
-    background: rgb(249,249,251);
-} */
+body{
+    position: relative;
+}
 .App>div:last-child{
     background: rgb(249,249,251);
+}
+.scrolltop_icon{
+   
+    border-radius: 20px !important;
+    background-color: darkorange !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }

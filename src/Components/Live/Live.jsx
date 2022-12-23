@@ -3,7 +3,6 @@ import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import ScrollToTop from "react-scroll-to-top"
 import Footer from '../Footer/Footer'
 import style from "./Live.module.css"
 export default function Live() {
@@ -35,7 +34,6 @@ export default function Live() {
     // console.log(data)
   return (
     <div className={style.container}>
-         <ScrollToTop smooth className={style.scrolltop_icon}/>
         <Tabs align='center'>
             <TabList boxShadow='xs' w={"50%"} rounded={"md"}>
                 <Tab >
@@ -206,7 +204,7 @@ export default function Live() {
  
 
         
-        <Footer />
+       
     </div>
   )
 }

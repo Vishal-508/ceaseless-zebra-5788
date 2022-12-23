@@ -3,6 +3,7 @@ import { Box, Center, Flex, Image, List, ListIcon, ListItem, Text, useColorModeV
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getGlobalData } from "../Redux/AppReducer/action";
 import "../Styles/HomeLeftBar.css";
 
@@ -17,6 +18,7 @@ console.log(sideData)
   const border_color = useColorModeValue("1px solid rgb(237,238,240)",  '1px solid rgb(81, 83, 84)')
 useEffect(()=>{
   dispatch(getGlobalData())
+ 
 },[])
   return (
     <Box className="tl-left-container"  >
@@ -34,7 +36,10 @@ useEffect(()=>{
         <List spacing={1} className="tl-list-container" >
           {sideData.followItems && sideData.followItems?.map(items=> <ListItem>
             <ListIcon as={ChevronRightIcon} color="rgb(3,169,244)" w={5} h={5} />
+            <a href={items.url.url} >
               {items.title}
+              </a>
+              
           </ListItem> )}
           
           
