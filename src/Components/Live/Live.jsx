@@ -16,7 +16,7 @@ export default function Live() {
     setLoading(true)
     axios.get("https://espnscore.onrender.com/api/matches").then((res) => {
       setLoading(false)
-      //    console.log(res.data)
+      
       for (let i = 0; i < res.data.length; i++) {
 
         if (res.data[i].state === "LIVE") {
@@ -34,7 +34,7 @@ export default function Live() {
 
 
   }, [data.length])
-  // console.log(data)
+
   if(isLoading){
     return  <Spinner
     thickness='7px'
