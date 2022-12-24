@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Image, SimpleGrid, Spinner, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
@@ -9,9 +9,12 @@ import Footer from '../Footer/Footer'
 export default function News() {
   const [newData,setData]=useState([])
   const [mostrated,setRated]=useState([])
+  const [isLoading,setLoading]=useState(false)
   useEffect(()=>{
     let arr=[]
+    setLoading(true)
       axios.get("https://espnscore.onrender.com/api/stories").then((res)=>{
+    setLoading(false)
        
         setData(res.data)
 
@@ -21,6 +24,21 @@ export default function News() {
       }).catch((er)=>console.log(er))
       setRated(newData.reverse())
   },[newData.length])
+  if(isLoading){
+    return  <Spinner
+    thickness='7px'
+    speed='0.65s'
+    emptyColor='gray.200'
+    color='blue.500'
+    size='xl'
+    margin={"auto"}
+    position="fixed"
+    left={window.innerWidth/2}
+    top={window.innerHeight/2}
+    
+
+  />
+  }
   return (
     <div>
         {/* <GridItem w='100%' h='10' bg='blue.500' /> */}

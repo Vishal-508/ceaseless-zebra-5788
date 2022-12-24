@@ -37,9 +37,9 @@ const LogOut = ({ handleLogout }) => {
 				onMouseLeave={onClose}
 			>
 				<Image
-					src={user.photourl}
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdTivq5eo2LNHDGGuTNCRf7Y2Z84Nz7apvR7iAUj9jWVB5vzpQZAjQFUPz5BnOKRpUoaQ&usqp=CAU"
 					alt="avatar"
-					width="40px"
+					width="25px"
 					borderRadius="50%"
 				/>
 			</MenuButton>

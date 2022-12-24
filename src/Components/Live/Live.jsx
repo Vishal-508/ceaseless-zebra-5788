@@ -30,6 +30,7 @@ export default function Live() {
       setResult(arr2)
     }).catch((er) => {
       console.log(er)
+      console.log(er)
     })
 
 
