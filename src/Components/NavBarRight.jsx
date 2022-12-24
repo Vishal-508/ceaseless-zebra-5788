@@ -15,7 +15,7 @@ const fantasy = {
 const NavBarRight = () => {
 	return (
 		<Flex >
-			<FantasyNav name={fantasy.name} image={fantasy.img} />
+			<FantasyNav name={fantasy.name} image={fantasy.img}  />
 			<NavMenuText
 				name="Edition IN"
 				leftDropDown={["India", "UAE", "USA"]}

@@ -1,5 +1,6 @@
 import { Box, Grid, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
+import Footer from '../Footer/Footer';
 import Topimage from '../TopImage/Topimage'
 import style from "./Teams.module.css";
 export default function Teams() {
@@ -102,6 +103,8 @@ export default function Teams() {
                     </SimpleGrid>
                 </Box>
             </Box>
+      <Footer />
+
         </div>
     )
 }
