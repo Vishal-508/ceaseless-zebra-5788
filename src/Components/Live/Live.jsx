@@ -223,7 +223,6 @@ export default function Live() {
 
 
 
-      <Footer />
 
     </div>
   )

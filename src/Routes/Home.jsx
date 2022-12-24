@@ -29,7 +29,6 @@ const Home = () => {
       </Box>
     </Flex>
    </Center>
-   <Footer />
 
     </div>
   )
