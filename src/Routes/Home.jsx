@@ -5,11 +5,12 @@ import HomeLeftBar from '../Components/HomeLeftBar';
 import HomeRightBar from '../Components/HomeRightBar';
 
 import NavBar from '../Components/Navbar';
+import Footer from '../Components/Footer/Footer';
 const Home = () => {
   const bg = useColorModeValue("rgb(249,249,251)", "#000");
 	const color = useColorModeValue("#2B2C2D", "white");
 
-  
+
   return (
     <div>
 
@@ -28,6 +29,8 @@ const Home = () => {
       </Box>
     </Flex>
    </Center>
+   <Footer />
+
     </div>
   )
 }

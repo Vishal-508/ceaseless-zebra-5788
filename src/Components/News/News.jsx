@@ -4,6 +4,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer'
 
 export default function News() {
   const [newData,setData]=useState([])
@@ -107,6 +108,7 @@ export default function News() {
       
       </SimpleGrid>
       </Box>
+      <Footer />
 
     </div>
   )

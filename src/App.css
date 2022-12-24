@@ -1,6 +1,7 @@
 .App{
     width: 100vmax;
     overflow-x: hidden;
+    position: relative;
 }
 .App>div:last-child{
     background: rgb(249,249,251);

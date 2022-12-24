@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { Getdata_func, } from '../../Redux/SinglePageReducer/action'
+import Footer from '../Footer/Footer'
 import styles from "./SinglePageNews.module.css"
 export default function SinglePageNews() {
   let [data,setData]=useState([])
@@ -97,6 +98,8 @@ Bumrah was rushed to the National Cricket Academy in Bengaluru from Thiruvananth
   </div>
         ))}
     </div>
+    <Footer />
+
     </div>
   )
 }
