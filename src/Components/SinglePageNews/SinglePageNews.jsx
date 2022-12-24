@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Spinner } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,6 +9,7 @@ import Footer from '../Footer/Footer'
 import styles from "./SinglePageNews.module.css"
 export default function SinglePageNews() {
   let [data,setData]=useState([])
+  const [isLoading,setLoading]=useState(false)
     let dispatch=useDispatch()
     let {id}=useParams()
     console.log(id, data)
@@ -18,13 +19,16 @@ export default function SinglePageNews() {
   id=Number(id)
     console.log(typeof Number(id))
     useEffect(()=>{
+      setLoading(true)
       Getdata_func(dispatch).then((res)=>{
-        console.log(res)
+       
+      setLoading(false)
+
         // console.log(typeof res.payload)
    let arr = (res.payload).filter((el)=>{
       return  el.id===id?el:false
     })
-    console.log(arr)
+  
    setData(arr)
 
       }).catch((err)=>{
@@ -33,23 +37,26 @@ export default function SinglePageNews() {
      
     
      
-    },[dispatch])
-
-//  { data.map((el)=>{
-//     console.log(el.title)
-//   })}
+    },[dispatch,data.length])
+    if(isLoading){
+      return  <Spinner
+      thickness='7px'
+      speed='0.65s'
+      emptyColor='gray.200'
+      color='blue.500'
+      size='xl'
+      margin={"auto"}
+      position="fixed"
+      left={window.innerWidth/2}
+      top={window.innerHeight/2}
+      
   
- console.log(data)
-
- if(data)
+    />
+    }
   return (
 
     <div className={styles.mem1_div1}>
-      {/* <Button size={["sm","md", "lg", "xl"]} >testing</Button> */}
-{/*       
-      <div className={styles.mem1_big_adv_img}>
-    <img src="https://tpc.googlesyndication.com/simgad/8133920793378226490?" alt="" />
-      </div> */}
+    
     <div className={styles.mem1_single_page_container}>
     {data.map((el)=>(
 <div className={styles.mem1_news_single_pageaddver_Parent}>
@@ -98,7 +105,6 @@ Bumrah was rushed to the National Cricket Academy in Bengaluru from Thiruvananth
   </div>
         ))}
     </div>
-    <Footer />
 
     </div>
   )

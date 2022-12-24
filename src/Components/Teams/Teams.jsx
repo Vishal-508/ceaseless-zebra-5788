@@ -103,7 +103,6 @@ export default function Teams() {
                     </SimpleGrid>
                 </Box>
             </Box>
-      <Footer />
 
         </div>
     )
