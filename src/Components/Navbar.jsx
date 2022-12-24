@@ -18,6 +18,7 @@ import NavBarRight from "./NavBarRight";
 import NavMenuText from "./NavMenuText";
 import { AddIcon, ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useEffect } from "react";
+import { FaUserAlt } from "react-icons/fa";
 
 const links = [
 	{
@@ -143,7 +144,7 @@ window.addEventListener('resize', function () {
 							
 								<NavBarRight />
 							</MenuItem>
-							<MenuItem icon={<AddIcon />} color={"black"}>
+							<MenuItem icon={<FaUserAlt />} color={"black"}>
 								{user.token === "" ? <LoginAndSignUp /> : <LogOut />}
 							</MenuItem>
 
