@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Text } from '@chakra-ui/react'
+import { Box, Grid, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 import Topimage from '../TopImage/Topimage'
 import style from "./Teams.module.css";
@@ -53,53 +53,53 @@ export default function Teams() {
                 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexDirection={"column"} p={10}>
                     <Text color={"black"}  w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>POPULAR INTERNATIONAL TEAMS</Text>
 
-                    <Grid templateColumns='repeat(3, 1fr)' gap={1} w={"80%"} m={"auto"}>
+                    <SimpleGrid columns={[2, null, 3]} gap={1} w={"80%"} m={"auto"}>
 
                         {teamInternation.map((el) => (
-                            <Box color={"black"}   display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
+                            <Box color={"black"}   display={"flex"} alignItems={"center"} p={5} gap={{ base: '2px', md: '3px', lg: '5px' }} boxShadow='xs' rounded='md' bg='white' key={el.index}>
                                 <Image src={el.url} w={"25%"} />
-                                <Text fontSize={16} fontWeight={600}>{el.title}</Text>
+                                <Text ontSize={{ base: '14px', md: '16px', lg: '20px' }}>{el.title}</Text>
 
 
                             </Box>
                         ))}
 
 
-                    </Grid>
+                    </SimpleGrid>
                 </Box>
                 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexDirection={"column"} p={10}>
                     <Text color={"black"}  w={"80%"} display={"flex"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>IPL 2022 TEAMS</Text>
 
-                    <Grid templateColumns='repeat(3, 1fr)' gap={1} w={"80%"} m={"auto"}>
+                    <SimpleGrid columns={[2, null, 3]} gap={1} w={"80%"} m={"auto"}>
 
                         {iplTeams.map((el) => (
-                            <Box color={"black"} display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
+                            <Box color={"black"} display={"flex"} alignItems={"center"} p={5} gap={{ base: '2px', md: '3px', lg: '5px' }} boxShadow='xs' rounded='md' bg='white' key={el.index}>
                                 <Image src={el.url} w={"25%"} />
-                                <Text fontSize={16} fontWeight={600}>{el.title}</Text>
+                                <Text fontSize={{ base: '14px', md: '16px', lg: '20px' }}>{el.title}</Text>
 
 
                             </Box>
                         ))}
 
 
-                    </Grid>
+                    </SimpleGrid>
                 </Box>
                 <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} flexDirection={"column"} p={10} mb={10}>
                     <Text w={"80%"} display={"flex"} color={"black"} alignItems={"center"} p={5} boxShadow='xs' rounded='md' bg='white'>POPULAR WOMEN'S TEAMS</Text>
 
-                    <Grid templateColumns='repeat(3, 1fr)' gap={1} w={"80%"} m={"auto"}>
+                    <SimpleGrid columns={[2, null, 3]} gap={1} w={"80%"} m={"auto"}>
 
                         {teamsWomens.map((el) => (
-                            <Box color={"black"}  display={"flex"} alignItems={"center"} p={5} gap={5} boxShadow='xs' rounded='md' bg='white' key={el.index}>
+                            <Box color={"black"}  display={"flex"} alignItems={"center"} p={5} gap={{ base: '2px', md: '3px', lg: '5px' }} boxShadow='xs' rounded='md' bg='white' key={el.index}>
                                 <Image src={el.url} w={"25%"} />
-                                <Text fontSize={16} fontWeight={600}>{el.title}</Text>
+                                <Text  fontSize={{ base: '14px', md: '16px', lg: '20px' }}>{el.title}</Text>
 
 
                             </Box>
                         ))}
 
 
-                    </Grid>
+                    </SimpleGrid>
                 </Box>
             </Box>
         </div>

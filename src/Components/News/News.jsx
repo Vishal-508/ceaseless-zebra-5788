@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Image, Text } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
@@ -71,43 +71,45 @@ export default function News() {
         ))}
       
       </Grid>
-      <Grid templateColumns='repeat(1, 1fr)'  w={"25%"} >
+      <SimpleGrid columns={[1, null, 1]}  w={"25%"} h={"fit-content"}  gap={2}>
       <Box boxShadow='xs'  rounded='md' bg='white'display={"flex"} alignItems={"center"} pl={2} mt={5}  fontSize='lg' >
         <Text color={"black"}>
           Most Rated
         </Text>
       </Box>
         {mostrated.length>0&&mostrated.map((el,index)=>(
-        <Box p={2}boxShadow='xs'  rounded='md' bg='white'  key={index} color={"black"}>
+        <Box p={{base:2,md:3,lg:4}} display={{ md: 'flex' }} boxShadow='xs' rounded='md'  h={"fit-content"}>
         <Box flexShrink={0}>
           <Image
             borderRadius='lg'
-            width={{ md: 40 }}
+            width={{base:10, md: 40 ,lg:40}}
             src={`https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_480,q_50/lsci${el.image.url}`}
-            alt=''
           />
         </Box>
-        <Box mt={{ base: 4, md: 0 }} ml={{ md:6 }}>
-                  <Link
-            mt={1}
-            display='block'
-            fontSize='lg'
-            // lineHeight='normal'
-            fontWeight='semibold'
-            href='#'
-            color={"black"}
+        <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }} >
+          <Text
+            fontWeight='bold'
+            textTransform='uppercase'
+            fontSize='sm'
+            letterSpacing='wide'
+            color='teal.600'
           >
-          {el.title}
-          </Link>
+            {el.title}
+          </Text>
+      
           <Text mt={2} color='gray.500'>
-           {el.image.credit}
+          {el.image.credit}
           </Text>
         </Box>
+        
       </Box>
         ))}
       
-      </Grid>
+      </SimpleGrid>
       </Box>
+
     </div>
   )
 }
+
+

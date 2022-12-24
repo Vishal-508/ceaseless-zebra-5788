@@ -1,7 +1,11 @@
-
+.App{
+    width: 100vmax;
+    overflow-x: hidden;
+}
 .App>div:last-child{
     background: rgb(249,249,251);
 }
+
 .scrolltop_icon{
    
     border-radius: 20px !important;

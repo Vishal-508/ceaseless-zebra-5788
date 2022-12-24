@@ -18,8 +18,8 @@ function App() {
          <NavBar/>
       <Topimage />
       <MainRoute />
-     
-      <Footer />
+     <Footer />
+      
     </div>
   );
 }

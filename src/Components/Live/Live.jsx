@@ -30,12 +30,12 @@ export default function Live() {
         })
      
 
-    },[])
+    },[data.length])
     // console.log(data)
   return (
     <div >
         <Tabs align='center'>
-            <TabList boxShadow='xs' w={"50%"} rounded={"md"}>
+            <TabList boxShadow='xs' w={"50%"} rounded={"md"}color={"black"}>
                 <Tab >
                   Live Score
                 </Tab>
