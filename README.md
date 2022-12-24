@@ -21,7 +21,7 @@
 - Redux
 - JavaScript
 - Chackra
--React icon
+-React icons
 - Css3
 <h1>Author</h1> 
 <li>Aamir Khan</li>
