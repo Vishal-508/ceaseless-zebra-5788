@@ -27,3 +27,4 @@
 <li>Aamir Khan</li>
 <li>Vishal Sharma</li>
 <li>Atul Kumar</li>
+<li>Rajat Soni</li>
