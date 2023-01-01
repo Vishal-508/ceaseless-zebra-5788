@@ -126,7 +126,7 @@ export default function News() {
       
       </SimpleGrid>
       </Box>
-      <Footer />
+  
 
     </div>
   )
