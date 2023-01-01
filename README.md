@@ -20,10 +20,11 @@ ESPN cricinfo is a sports news website exclusively for the game of cricket. The 
 - React.js
 - Redux
 - JavaScript
-- Chackra
+- Chakra
 -React icons
 - Css3
 <h1>Author</h1> 
 <li>Aamir Khan</li>
 <li>Vishal Sharma</li>
 <li>Atul Kumar</li>
+<li>Rajat Soni</li>
