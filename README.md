@@ -10,6 +10,13 @@ ESPN cricinfo is a sports news website exclusively for the game of cricket. The 
    Backend   : JSON Server deployed on Render
    ```
    
+## Glimpse and screenshots of our cloned website:
+  ---
+  
+**1) Home Page**
+
+![Screenshot (2054)](https://user-images.githubusercontent.com/101388992/209437495-e539c56c-c759-471e-b59c-6f747f00fdf7.png)
+   
 <h1>Features</h1>
 <li>Live cricket score</li>
 <li>highlighted match score </li>
@@ -18,7 +25,7 @@ ESPN cricinfo is a sports news website exclusively for the game of cricket. The 
 <a href="https://ceaseless-zebra-5788.vercel.app/">Live deployed link</a>
 
 
-![Screenshot (2054)](https://user-images.githubusercontent.com/101388992/209437495-e539c56c-c759-471e-b59c-6f747f00fdf7.png)
+
 ![Screenshot (2055)](https://user-images.githubusercontent.com/101388992/209437498-7b301dce-655f-4fc0-a384-146697808e9c.png)
 ![Screenshot (2062)](https://user-images.githubusercontent.com/101388992/209437500-034bb7d4-43bb-4d10-a10d-35e1756c837a.png)
 ![Screenshot (2064)](https://user-images.githubusercontent.com/101388992/209437502-7625c515-d934-47d0-9d58-0bbf1daa3d4e.png)
