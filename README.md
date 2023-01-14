@@ -1,5 +1,15 @@
 <h1 fontsize="30px">ESPN cricinfo</h1>
 ESPN cricinfo is a sports news website exclusively for the game of cricket. The site features news, articles, live coverage of cricket matches, and StatsGuru, a database of historical matches and players from the 18th century to the present. 
+
+
+##  Tech-stack used
+  
+   ```
+   Frontend : React, Redux, Chakra UI, JavaScript, Custom CSS, React Icons.
+   
+   Backend   : JSON Server deployed on Render
+   ```
+   
 <h1>Features</h1>
 <li>Live cricket score</li>
 <li>highlighted match score </li>
@@ -16,13 +26,7 @@ ESPN cricinfo is a sports news website exclusively for the game of cricket. The 
 ![Screenshot (2066)](https://user-images.githubusercontent.com/101388992/209437506-d49a2ae5-449b-4507-938f-79d8802f9e45.png)
 ![Screenshot (2067)](https://user-images.githubusercontent.com/101388992/209437514-481d67f6-6dc2-47cc-8ae9-5b179848ae2f.png)
 
- <h2>Frontend</h2>
-- React.js
-- Redux
-- JavaScript
-- Chakra
--React icons
-- Css3
+
 <h1>Author</h1> 
 <li>Aamir Khan</li>
 <li>Vishal Sharma</li>
