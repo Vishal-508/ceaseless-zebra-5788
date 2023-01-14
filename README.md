@@ -21,9 +21,13 @@ ESPN cricinfo is a sports news website exclusively for the game of cricket. The 
 
 **2) Live cricket score**
 
+![Screenshot (2064)](https://user-images.githubusercontent.com/101388992/209437502-7625c515-d934-47d0-9d58-0bbf1daa3d4e.png)
+
 **3) Features**
 
-**4) Highlighted Match Score**
+**4) Popular International Team Page**
+
+![Screenshot (2062)](https://user-images.githubusercontent.com/101388992/209437500-034bb7d4-43bb-4d10-a10d-35e1756c837a.png)
 
 **5) Matches result**
 
@@ -35,8 +39,8 @@ ESPN cricinfo is a sports news website exclusively for the game of cricket. The 
 
 
 
-![Screenshot (2062)](https://user-images.githubusercontent.com/101388992/209437500-034bb7d4-43bb-4d10-a10d-35e1756c837a.png)
-![Screenshot (2064)](https://user-images.githubusercontent.com/101388992/209437502-7625c515-d934-47d0-9d58-0bbf1daa3d4e.png)
+
+
 ![Screenshot (2065)](https://user-images.githubusercontent.com/101388992/209437505-2352fa01-b018-4ad3-918f-2be31ed86816.png)
 ![Screenshot (2066)](https://user-images.githubusercontent.com/101388992/209437506-d49a2ae5-449b-4507-938f-79d8802f9e45.png)
 ![Screenshot (2067)](https://user-images.githubusercontent.com/101388992/209437514-481d67f6-6dc2-47cc-8ae9-5b179848ae2f.png)
